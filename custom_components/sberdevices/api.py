@@ -135,7 +135,7 @@ class HomeAPI:
     async def update_devices_cache(self):
         self._devices = extract_devices(await self.get_device_tree())
 
-    def get_cached_devices(self) -> list[dict[str, any]]:
+    def get_cached_devices(self) -> dict[str, any]:
         return self._devices
 
     def get_cached_device(self, device_id: str) -> dict[str, any]:
