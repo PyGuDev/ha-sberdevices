@@ -21,7 +21,6 @@ async def async_setup_entry(
         [
             SberSwitchEntity(DeviceAPI(home, device["id"]))
             for device in home.get_cached_devices().values()
-            if "relay" in device["category"]
         ]
     )
 
